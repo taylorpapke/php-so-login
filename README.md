@@ -92,3 +92,5 @@ Start your PHP server (if using localhost, run php -S localhost:8000 in the term
 Navigate to http://localhost:8000/login.php.
 Click on the "Login with Google" link, which will redirect you to Google's sign-in page.
 After signing in, Google will redirect you back to callback.php, where you can retrieve and display the user's info.
+
+# Make sure to create a config.php for YOUR_GOOGLE_CLIENT_ID and YOUR_GOOGLE_CLIENT_SECRET!
