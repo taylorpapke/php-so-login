@@ -1,1 +1,1 @@
-# php-so-login
+# php-sso-login
