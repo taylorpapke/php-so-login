@@ -1,6 +1,7 @@
 # php-sso-login
 
-Step-by-Step Guide to Starting a PHP Server
+## Step-by-Step Guide to Starting a PHP Server
+
 1. Install PHP
 
 First, ensure that PHP is installed on your system. You can check this by opening a terminal (or Command Prompt) and typing:
@@ -59,6 +60,8 @@ Download and install XAMPP from https://www.apachefriends.org/index.html.
 After installation, start the Apache server from the XAMPP control panel.
 Place your PHP files in the htdocs folder (inside the XAMPP installation directory).
 Access your files via http://localhost/your-file.php.
+
+## Setting up Google SSO
 
 Step 1: Set up your Google API credentials
 Create a project in the Google Developer Console.
