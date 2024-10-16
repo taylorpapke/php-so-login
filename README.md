@@ -59,3 +59,33 @@ Download and install XAMPP from https://www.apachefriends.org/index.html.
 After installation, start the Apache server from the XAMPP control panel.
 Place your PHP files in the htdocs folder (inside the XAMPP installation directory).
 Access your files via http://localhost/your-file.php.
+
+Step 1: Set up your Google API credentials
+Create a project in the Google Developer Console.
+Enable the Google Sign-In API:
+Go to the "API & Services" > "Library" section.
+Search for "Google Sign-In" or "Google Identity".
+Enable the API for your project.
+Create OAuth 2.0 credentials:
+Go to the "Credentials" section in the API Console.
+Create an "OAuth 2.0 Client ID".
+Set the application type to "Web Application".
+Provide the Authorized redirect URIs where Google will redirect after successful authentication (e.g., http://localhost/your-app/callback.php).
+After setting this up, you will receive a Client ID and Client Secret.
+
+Step 2: Install the Google API PHP Client Library
+You can use the Google API PHP Client Library to handle OAuth easily.
+
+Install it via Composer:
+
+composer require google/apiclient:^2.0
+
+Step 3: Create the login and callback logic
+
+Use the provided code in login.php and callback.php
+
+Step 4: Running the app
+Start your PHP server (if using localhost, run php -S localhost:8000 in the terminal in your app's directory).
+Navigate to http://localhost:8000/login.php.
+Click on the "Login with Google" link, which will redirect you to Google's sign-in page.
+After signing in, Google will redirect you back to callback.php, where you can retrieve and display the user's info.
