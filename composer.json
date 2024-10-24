@@ -1,5 +1,7 @@
 {
     "require": {
-        "google/apiclient": "^2.0"
+        "google/apiclient": "^2.0",
+        "league/oauth2-client": "^2.7",
+        "thenetworg/oauth2-azure": "^2.2"
     }
 }
