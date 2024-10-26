@@ -22,6 +22,15 @@ $microsoft_client = new \League\OAuth2\Client\Provider\GenericProvider([
     'scopes'                  => ['https://experientialai.onmicrosoft.com/microsoft-sso/openid', 'email', 'profile'],
 ]);
 
+// Amazon SSO URL
+$amazon_auth_url = sprintf(
+    // 'https://%s/oauth2/authorize?response_type=code&client_id=%s&redirect_uri=%s&scope=openid profile email',
+    'https://%s/oauth2/authorize?response_type=code&client_id=%s&redirect_uri=%s&scope=openid profile email&prompt=login',
+    $config['amazon_domain'],
+    $config['amazon_client_id'],
+    urlencode($config['amazon_redirect_uri'])
+);
+
 $microsoft_auth_url = $microsoft_client->getAuthorizationUrl();
 
 // Create the Google OAuth URL
@@ -88,6 +97,7 @@ $authUrl = $client->createAuthUrl();
     <div class="container">
         <a href="<?= htmlspecialchars($authUrl); ?>">Login with Google</a>
         <a href="<?= htmlspecialchars($microsoft_auth_url); ?>">Login with Microsoft</a>
+        <a href="<?= htmlspecialchars($amazon_auth_url); ?>">Login with Amazon</a>
 
         <!-- Dropdown menu below sign-in links -->
         <div class="dropdown">
