@@ -43,6 +43,6 @@ if (isset($_GET['code'])) {
     }
 } else {
     // If no code in the URL, redirect back to the login page
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }

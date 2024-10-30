@@ -55,7 +55,7 @@ if (isset($_GET['code'])) {
     }
 } else {
     // If no code is provided, redirect back to the login page
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 

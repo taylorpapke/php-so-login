@@ -5,7 +5,7 @@ session_start();
 error_log("Session: " . print_r($_SESSION, true));
 
 if (!isset($_SESSION['user_info'])) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit();
 }
 

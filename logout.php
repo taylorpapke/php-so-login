@@ -9,7 +9,7 @@ $logoutUrl = sprintf(
     'https://%s/logout?client_id=%s&logout_uri=%s',
     $config['amazon_domain'],
     $config['amazon_client_id'],
-    urlencode('http://localhost:8000/login.php') // Redirect back to your login page
+    urlencode('http://localhost:8000/index.php') // Redirect back to your login page
 );
 
 header('Location: ' . $logoutUrl);
