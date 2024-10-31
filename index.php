@@ -33,7 +33,8 @@ $amazon_auth_url = sprintf(
     'https://%s/oauth2/authorize?response_type=code&client_id=%s&redirect_uri=%s&scope=openid profile email&prompt=login',
     $config['amazon_domain'],
     $config['amazon_client_id'],
-    urlencode($config['amazon_redirect_uri'])
+    urlencode($config['amazon_redirect_uri']),
+    urlencode('openid profile email')
 );
 
 $microsoft_auth_url = $microsoft_client->getAuthorizationUrl();
