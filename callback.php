@@ -9,7 +9,7 @@ $config = require 'config.php';
 $client = new Google_Client();
 $client->setClientId($config['YOUR_GOOGLE_CLIENT_ID']);
 $client->setClientSecret($config['YOUR_GOOGLE_CLIENT_SECRET']);
-$client->setRedirectUri('http://localhost:8000/callback.php');
+$client->setRedirectUri($config['YOUR_GOOGLE_REDIRECT_URI']);
 
 // If the code is in the URL, exchange it for an access token
 
